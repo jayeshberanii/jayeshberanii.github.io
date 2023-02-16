@@ -59,7 +59,7 @@
   </div>
 
 
-<div class="modal fade" id="exampleModal"tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade " id="exampleModal"tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -67,45 +67,45 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form class="was-validated" action="home.html">
+        <form class=" formadd" name="formadd" action="home.html" >
           <div class="mb-3">
             <label  class="col-form-label">Name</label>
-            <input type="text" class="form-control" id="name" required/>
+            <input type="text" class="form-control" id="name" name="f" required/>
             <div class="invalid-feedback">
               Please Enter your name
             </div>
           </div>
           <div class="mb-3">
             <label  class="col-form-label">Address: </label>
-            <textarea  class="form-control" id="address" required></textarea>
+            <textarea  class="form-control" id="address" name="f1" required></textarea>
             <div class="invalid-feedback">
               Please Enter your Address
             </div>
           </div>          
           <div class="mb-3">
             <label  class="col-form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" required/>
+            <input type="text" class="form-control emailcheck" name="f2" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" required/>
             <div class="invalid-feedback">
               Please Enter your valid Email Address
             </div>
           </div>
           <div class="mb-3">
             <label  class="col-form-label">Select Gender :</label>
-            <input type="radio" name="gender" class="ms-4" id="male" value="male" required/>&nbsp;&nbsp;Male
-            <input type="radio" name="gender" class=" ms-3" id="female" value="female" required/>&nbsp;&nbsp;Female
+            <input type="radio" name="gender" class="ms-4" id="male" value="male" name="f3" required/>&nbsp;&nbsp;Male
+            <input type="radio" name="gender" class=" ms-3" id="female" value="female" name="f3" required/>&nbsp;&nbsp;Female
             <div class="invalid-feedback">
               Please Enter gender
             </div>
           </div>
           <div class="mb-3">
             <label  class="col-form-label">Select Date:</label>
-            <input type="date" class="ms-4" id="date" required/>
+            <input type="date" class="ms-4" id="date" max="2023-02-16" name="f4" required/>
             <div class="invalid-feedback">
               Select date
             </div>
           </div>
           <div class="modal-footer">
-        <button type="submit" class="btn btn-primary btn1">save</button>        
+        <button type="submit" class="btn btn-primary btn1" onclick="return validateForm()">save</button>        
       </div>
         </form>
       </div>      
@@ -145,7 +145,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form class="was-validated" action="home.html">
+        <form class="was-validated formedit" action="home.html">
           <div class="mb-3">            
             <input type="hidden" class="form-control " id="id1" />
           </div>
@@ -180,7 +180,7 @@
           </div>
           <div class="mb-3">
             <label  class="col-form-label">Select Date:</label>
-            <input type="date" class="ms-4" id="date1" required/>
+            <input type="date" class="ms-4" id="date1" max="2023-02-16" required/>
             <div class="invalid-feedback">
               Select date
             </div>

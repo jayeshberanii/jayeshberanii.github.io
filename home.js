@@ -125,6 +125,36 @@ const editdetail=()=>{
   // item[0].email=document.getElementById('email1').value
   // item[0].address=document.getElementById('address1').value
 }
+date1.max=new Date().toISOString().split('T')[0]
+date.max=new Date().toISOString().split('T')[0]
 
-document.querySelector('.btn1').addEventListener('click',adduser)
-document.querySelector('.save').addEventListener('click',editdetail)
+function validateForm() {
+  console.log("hello from valid");
+  let x = document.forms["formadd"]["f"].value;
+  console.log(x);
+  let y = document.getElementById('address').value;
+  console.log(y);
+  // let z = document.getElementById('email').value;
+  // console.log(z);
+  // let a = document.querySelector('input[name="gender"]:checked').value  
+  // console.log(a);
+  // let b = document.getElementById('date').value
+  // console.log(b);
+  
+  if (x == "") {
+    document.querySelector('.formadd').classList.add('was-validated')
+  }else if(y==""){
+    document.querySelector('.formadd').classList.add('was-validated')
+  }else if(z==""){
+    document.querySelector('.formadd').classList.add('was-validated')
+  }else if(a==""){
+    document.querySelector('.formadd').classList.add('was-validated')
+  }else if(b==""){
+    document.querySelector('.formadd').classList.add('was-validated')
+  }
+}
+
+
+document.querySelector('.formadd').addEventListener('submit',adduser)
+//document.querySelector('.save').addEventListener('submit',editdetail)
+document.querySelector('.formedit').addEventListener('submit',editdetail)
