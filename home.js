@@ -17,8 +17,8 @@ const loaddata=()=>{
     <td>${e.address}</td>
     <td>${e.gender}</td>
     <td>${e.date}</td>
-    <td><button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" onclick={edit(${e.id})}>Edit</button></td>
-    <td><button className="btn btn-danger" onclick={delet(${e.id})}>Delete</button></td>                    
+    <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" onclick={edit(${e.id})}>Edit</button>
+    <button class="btn btn-danger" onclick={delet(${e.id})}>Delete</button></td>                    
   </tr>`
 
   const trow= document.getElementById('tablerow')   
@@ -64,8 +64,8 @@ const adduser=()=>{
       <td>${obj.address}</td>
       <td>${obj.gender}</td>
       <td>${obj.date}</td>
-      <td><button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" onclick={edit(${obj.id})}>Edit</button></td>
-      <td><button className="btn btn-danger" onclick={delet(${obj.id})}>Delete</button></td>                    
+      <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" onclick={edit(${obj.id})}>Edit</button>
+      <button class="btn btn-danger" onclick={delet(${obj.id})}>Delete</button></td>                    
     </tr>`
 
     const trow= document.getElementById('tablerow')         
